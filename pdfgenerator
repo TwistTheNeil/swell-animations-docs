@@ -2,6 +2,15 @@
 
 cd ~/Pathfinding/
 
+git fetch &> /dev/null
+check=$(git log HEAD..origin/master --oneline | wc -l)
+
+if [ "$check" -lt "1" ]; then
+    exit;
+fi
+
+git pull --rebase &> /dev/null
+
 for i in $(find . -name tex); do
     pushd "$i" &> /dev/null
     make pdf &> /dev/null
