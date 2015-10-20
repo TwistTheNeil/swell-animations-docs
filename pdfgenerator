@@ -5,6 +5,7 @@ cd ~/Pathfinding/
 git fetch &> /dev/null
 check=$(git log HEAD..origin/master --oneline | wc -l)
 
+sed -i "s/Last\spulled\sgit.*/Last pulled git $(date)<\/font>/" ~/public_html/stuff.html
 if [ "$check" -lt "1" ]; then
     exit;
 fi
@@ -21,4 +22,4 @@ for i in $(find . -name *.pdf); do
     mv "$i" ~/public_html/ &> /dev/null
 done
 
-sed -i "s/Last.*/Last updated $(date)<\/font>/" ~/public_html/stuff.html
+sed -i "s/Last\supdated\spdfs.*/Last updated pdfs $(date)<\/font><br>/" ~/public_html/stuff.html
