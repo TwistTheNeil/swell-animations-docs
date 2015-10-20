@@ -63,11 +63,11 @@ The path’s fit will be calculated using delta values between the drawn path an
 \subsection{Unity UI prototypes}
 Both prototypes will focus on drawing the path.
 
-Prototype \#1 will be produced in order to help define requirements and provide the foundation for the full plugin. The features of the UI prototype will include the buttons, toolbar, panels, and tools needed to carry out what features we've described. This will help us identify potential requirements issues early on instead of later down the road. Based on the user's drawing motions, we will generate control points to form a path.
+Prototype \#1 will be produced in order to help define requirements and provide the foundation for the full plugin. The features of the UI prototype will include the buttons, toolbar, panels, and tools needed to carry out what features we've described. This will help us identify potential requirements issues early on instead of later down the road. Based on the user's drawing motions, we will generate control points to form a path. We will create a simple toolbar which will feature a pen and mouse tool for drawing and refining the path, respectively. 
 
 Prototype \#2 will take the control points and generate B-splines from them.
 
-The refining and deleting of the path are the next steps past the prototype and make up the UI functionality. We will create a simple toolbar which will feature a pen and mouse tool for drawing and refining the path, respectively.This will be done with separate Refine Path Pen Tool will be added.
+The refining and deleting of the path are the next steps past the prototype and make up the UI functionality. This will be done with separate Refine Path Pen Tool will be added.
 
 \subsection{Infrastructure setup}
 This includes setting up the repository, automated build setup, and issue tracking software. Our repository of choice will be Github. We will also use Github to keep track of issues that arise during the development of our system. We shall also be using LaTeX to typeset the planning, requirement, and design documents as a standard which will be checked into Github and so we will be able to collaborate on it together and maintain revision history.
@@ -82,16 +82,16 @@ Specifications relating to the Unity UI and how the user will use to engage with
 \subsubsection{Path hierarchy palette.} This will include options to show/hide paths, show/fold subtrees and name/rename paths. Triangles will appear next to non-leaf node paths --- clicking on the triangle will show/hide the clicked path’s subtree.
 
 \subsection{Core Functionality Specifications}
-Specifications relating to the core features of the project.
+We will need to define the specifications relating to the core features of the project. As described later in the UI Development section, we have an initial idea of what we will need to do to implement our idea. After the prototype has been completed, we can go more into detail using the interface features and preliminary development work to show us what can, cannot, and still needs to be done. From there, we can make changes accordingly to the specifications. For example, we may find out through prototyping that the way we imagine the user drawing lines can't be done in Unity. Obviously we would have to modify that feature to fit both what we want and what is possible.
 
 \subsection{UI Test Plan}
-The plan on how the UI will be tested and what criteria will correlate to successful implementation. The final phase of this testing will be User acceptance testing.
+The plan on how the UI will be tested and what criteria will correlate to successful implementation. As we go along making the first two prototypes, we can test the UI in phases based on what each prototype entails. The final phase of this testing will be User acceptance testing.
 
 \subsection{Core Functionality Test Plan}
-This plan will contain unit tests and any testing suites that need to be used in order to ensure all core functionality requirements are implemented.
+This plan will contain unit tests that need to be used in order to ensure all core functionality requirements are implemented correctly.
 
 \subsection{Weekly Defect Reports}
-During development a weekly report will be compiled that will include new defects and progress on existing defects. This is meant to be a tool to assist in timely defect resolution.  Solutions to roadblocks and action items relating to defects can be addressed here.
+During development a weekly report will be compiled that will include new defects and progress on existing defects. This is meant to be a tool to assist in timely defect resolution. Solutions to roadblocks and action items relating to defects can be addressed here.
 
 \subsection{UI Development}
 A simple toolbar/tray will hold the pen and mouse tools. This toolbar can reside at the top of the interface window.
@@ -208,7 +208,7 @@ What we will do and who will do it:
 \begin{itemize}
 	\item Continue and finalize Development - All, Lead: Angel
 	\item Develop extensions for Maya and Unreal, if time allows - All, Lead: Angel
-	\item Continue and complete Testing on all features - All, Lead: 
+	\item Continue and complete Testing on all features - All, Lead: Chris
 	\item Prepare final release - All
 \end{itemize}
 
