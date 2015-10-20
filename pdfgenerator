@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd ~/Pathfinding/
+
+for i in $(find . -name tex); do
+    pushd "$i" &> /dev/null
+    make pdf &> /dev/null
+    popd &> /dev/null
+done
+
+for i in $(find . -name *.pdf); do
+    mv "$i" ~/public_html/ &> /dev/null
+done
+
+sed -i "s/Last.*/Last updated $(date)<\/font>/" ~/public_html/stuff.html
