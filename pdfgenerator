@@ -22,4 +22,4 @@ for i in $(find . -name *.pdf); do
     mv "$i" ~/public_html/ &> /dev/null
 done
 
-sed -i "s/Last\supdated\spdfs.*/Last updated pdfs $(date)<\/font>/" ~/public_html/stuff.html
+sed -i "s/Last\supdated\spdfs.*/Last updated pdfs $(date)<\/font><br>/" ~/public_html/stuff.html
