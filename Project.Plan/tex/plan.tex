@@ -2,10 +2,14 @@
 \usepackage{amsmath}
 \usepackage{enumitem}
 \usepackage{float}
+\usepackage{hyperref}
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 
 \begin{document}
 
-\title{Pathfinding Project Plan}
+\title{Animation Generation Project Plan}
 \author{Sarah Kushner \\
 		Neil Castelino \\
 		Angel Delgado \\
@@ -23,6 +27,7 @@
 \hline
 Name 		& Date	 		& 	Comment	 								& 	Version	 \\ \hline
 All		& 10/12/15		& 	Initial project plan document			&  	1.0 		 \\ \hline
+All		& 10/19/15		& 	Tightening up details and defining the problem			&  	1.1 		 \\ \hline
 \end{tabular}
 \end{table}
 
@@ -30,80 +35,99 @@ All		& 10/12/15		& 	Initial project plan document			&  	1.0 		 \\ \hline
 
 \section{Background}
 \label{sec:back}
-A Unity plug-in that allows users to automatically animate ``characters" under a set of constraints by drawing a rough path from the character to a desired destination.
+Based on previous research by the lab INRIA and their paper \href{https://hal.archives-ouvertes.fr/hal-01153763/file/SpaceTimeSketching.pdf}{Space-time sketching of character animation}, we want to build a Unity plugin that allows users to animate ``characters" along a sketched path under a set of constraints.
+
+The path’s fit will be calculated using delta values between the drawn path and the input point, where the input points are $(x,y,z)$ coordinates dropped every $\Delta t$ seconds for some predetermined $t$. The points will be dropped in a plane directly parallel to the viewport. The points can then be further modified. The distance from the viewport for each control point and in relation to each other can be changed using the mouse pointer tool.
 
 \subsection{Features}
 (See more in the Customer Requirements Document)
 \begin{itemize}
-  \item Ability for user to draw a line in 3D space from a selected object to its destination
-  \item The hand-drawn line to give a rough idea of the motion 
-  \item Path planning techniques to calculate paths that matched the lines (as close as possible) 
-  	\begin{itemize}
-	  \item Genetic programming
-	  \item Constraint-based optimization
-	  \item Possibly look into a third option, reinforcement learning
-	\end{itemize}
-  \item Path should also satisfy physical constraints
+ \item The user will be able to draw a line in 3D space from a selected object to its destination.
+ \item The hand-drawn line will be used to calculate the motion and direction of the character, and then it will be animated.
+ \item The animation generated should satisfy two constraints:
 	\begin{itemize}
-	  \item Size and shape of character
-	  \item Obstacles in the scene e.g. walls, water
-	  \item Preferences of character (we will need some metric to narrow down multiple viable paths)
+	  \item Be as close to the user-drawn line as possible
+	  \item Be the most realistic animation possible based on the path
 	\end{itemize}
-  \item Present this functionality in the form of a plug-in to a game engine or animation software
+ \item The user will be able to refine the path using control points and if time allows, editing of path can be done using the over-sketching technique.
+ \item The user will be able to delete the paths they've drawn.
+ \item The user will be able to see the paths they've drawn by selecting multiple characters at a time.
+ \item If multiple characters have the same skeleton/rig (are copies of the same model), the user can copy and paste animations, by means of copying the paths, to other characters.
+\item The user will be able to save and export paths to a file to be re-loaded into the plugin at a later time.
+ \item This functionality will be presented in the form of a plugin to Unity.
 \end{itemize}
 
 
 \section{Statement of Work}
 \label{sec:work}
-\subsection{Unity UI prototype} 
-A prototype will be produced in order to ensure the viability of this project.
+\subsection{Unity UI prototypes}
+Both prototypes will focus on drawing the path.
 
-\subsection{Infrastructure setup} 
-This includes setting up the repository, automated build setup, ticket software, and any other tools needed for this project.
+Prototype \#1 will be produced in order to help define requirements and provide the foundation for the full plugin. The features of the UI prototype will include the buttons, toolbar, panels, and tools needed to carry out what features we've described. This will help us identify potential requirements issues early on instead of later down the road. Based on the user's drawing motions, we will generate control points to form a path.
 
-\subsection{UI Specifications} 
-Specifications relating to the Unity UI and how the user will use to engage with the core functionality.  
+Prototype \#2 will take the control points and generate B-splines from them.
 
-\subsection{Core Functionality Specifications} 
+The refining and deleting of the path are the next steps past the prototype and make up the UI functionality. We will create a simple toolbar which will feature a pen and mouse tool for drawing and refining the path, respectively.This will be done with separate Refine Path Pen Tool will be added.
+
+\subsection{Infrastructure setup}
+This includes setting up the repository, automated build setup, and issue tracking software. Our repository of choice will be Github. We will also use Github to keep track of issues that arise during the development of our system. We shall also be using LaTeX to typeset the planning, requirement, and design documents as a standard which will be checked into Github and so we will be able to collaborate on it together and maintain revision history.
+
+\subsection{UI Specifications}
+Specifications relating to the Unity UI and how the user will use to engage with the core functionality. Our prototypes will be used to solidify the specifications. It will show us what can and cannot be done through the UI in the ways we have defined based on limited knowledge.
+
+\subsubsection{Main canvas.} This will be the drawing area where paths are displayed as lines with square control points. Control points can be moved here using the Arrow tool. Paths can be drawn with the pen tool. Paths can be refined by drawing over / on top of already drawn paths using the path refine pen tool.
+
+\subsubsection{Toolbar tray.} Located at the top of the window. This toolbar will contain an arrow tool, pen tool, and path refine pen tool.
+
+\subsubsection{Path hierarchy palette.} This will include options to show/hide paths, show/fold subtrees and name/rename paths. Triangles will appear next to non-leaf node paths --- clicking on the triangle will show/hide the clicked path’s subtree.
+
+\subsection{Core Functionality Specifications}
 Specifications relating to the core features of the project.
 
-\subsection{UI Test Plan} 
-The plan on how the UI will be tested and what criteria will correlate to successful implementation.  The final phase of this testing will be User acceptance testing.
+\subsection{UI Test Plan}
+The plan on how the UI will be tested and what criteria will correlate to successful implementation. The final phase of this testing will be User acceptance testing.
 
-\subsection{Core Functionality Test Plan} 
+\subsection{Core Functionality Test Plan}
 This plan will contain unit tests and any testing suites that need to be used in order to ensure all core functionality requirements are implemented.
 
-\subsection{Weekly Defect Reports} 
+\subsection{Weekly Defect Reports}
 During development a weekly report will be compiled that will include new defects and progress on existing defects. This is meant to be a tool to assist in timely defect resolution.  Solutions to roadblocks and action items relating to defects can be addressed here.
 
-\subsection{UI Development} 
-Development of the UI in Unity.
+\subsection{UI Development}
+A simple toolbar/tray will hold the pen and mouse tools. This toolbar can reside at the top of the interface window.
 
-\subsection{Core Functionality Development} 
-Development of the core functionality. Break project development down into smaller pieces of the whole. Develop and test each part independently, working toward finish from the ground up. Project can be stubbed out first with dummy methods.
+The main window will be the work area, where the paths can be drawn, and edited using the different tools available in the toolbar tray.
 
-\subsection{Product Manual} 
-A manual will need to be produced to assist users and explain the functionality of the product.
+There will be a window to Show/Hide control paths for objects. Paths will be organized in a tree hierarchy. Each path may belong to any one parent path and have any number of child paths. This window will contain one path per line. Child paths will be indented one more indent unit than their parent. Parent paths can be folded such that their child paths are hidden. A triangle will appear to the left of any path that is not a leaf node. The triangle will point up when child paths are folded (hidden) and to the right when unfolded (visible). Paths can be renamed. The user can click the name, which will activate edit mode. Edit mode will use visual cues such as a border surrounding the path name with a contrasting background color. The user can click outside of this border box to exit edit mode or press the Escape or Enter/Return key.
 
+\subsection{Core Functionality Development}
+Development of the core functionality. Break project development down into smaller pieces of the whole: UI frame (toolbars, tools, modes, buttons), UI functionality (path drawing, refining, copying), and core functionality (the animation generation, math). Develop and test each part independently, working toward finish from the ground up. Project can be stubbed out first with dummy methods.
+
+\subsection{Product Manual}
+A manual will need to be produced to assist users and explain the functionality of the product. This manual will contain everything that the user needs to know about how to successfully use our tool --- this might consist of what the UI will look like, how to use the UI, and output that the user can expect. 
+
+This manual will also include a setup/installation manual to explain how the user can get started using our tool.
 
 \section{Resource List}
 \label{sec:resource}
 \subsection{Hardware}
+Proper hardware and software is listed below to run Unity with best results:
 \begin{itemize}
-  \item Proper hardware to run Unity with best results
+ \item Operating System: Windows XP SP2+, 7 SP1+, 8, 10, Mac OS X 10.8+
+ \item GPU: Graphics card with DX9 (shader model 2.0) capabilities. Anything made since 2004 should work.
 \end{itemize}
 
 \subsection{Software}
 \begin{itemize}
-  \item Proper OS to develop Unity plug-ins (Windows or OSX)
-  \item Student version of Unity
-  \item Student version of Autodesk Maya
-  \item Student version of Unreal Engine
+ \item Proper OS to develop Unity plugins (Windows or OSX)
+ \item Student version of Unity
+ \item Student version of Autodesk Maya
+ \item Student version of Unreal Engine
 \end{itemize}
 
 \section{Assumptions}
 \label{sec:assumptions}
-Users should have general knowledge of how Unity works and is operated.
+Users should have general knowledge of how to install Unity and how to navigate the software once executed.
 
 \section{Schedule}
 \label{sec:schedule}
@@ -111,13 +135,20 @@ Weeks marked with (F) denote finals week, and weeks marked with (H) denote holid
 
 \subsection{Term 1}
 Fall 2015 \\
-Goals:
+What we will do and who will do it:
 \begin{itemize}
-	\item Define Project Plan
-	\item Define Customer Requirements
-	\item Define Requirements Specification
-	\item Begin Design Specification
-	\item Begin Preliminary Development with core functionality for a prototype (This way, we can hopefully spot some expected problems noted in Section \ref{sec:risks} early on in the process.)
+	\item Define Project Plan - All, Lead: Sarah
+	\item Define Customer Requirements - All
+	\item Define Requirements Specification - All, Lead: Neil
+	\item Begin Design Specification - All, Lead: Carlo
+	\item Develop our two prototypes (This way, we can hopefully spot some expected problems noted in Section \ref{sec:risks} early on in the process.) - All, Lead: Angel \\
+	The prototypes require:
+	\begin{itemize} 
+		\item UI icons - Sarah
+		\item the GUI - Angel
+		\item control points generation - Sarah, Carlo
+		\item B-spline generation - Neil, Chris
+	\end{itemize}
 \end{itemize}
 
 \begin{table}[H]
@@ -128,28 +159,28 @@ Week 	& Date	 		& Work	 		& 	Done?	 \\ \hline
 1		& 09/21/15	 	& Form group		& 	yes		 \\ \hline
 2		& 09/28/15	 	& Solidify idea	& 	yes		 \\ \hline
 3		& 10/05/15	 	& Preliminary Plan document	& 	yes		 \\ \hline
-4 (H)	& 10/12/15	 	& Plan document	& 			 \\ \hline
-5		& 10/19/15	 	& Customer requirements document		& 			 \\ \hline
-6		& 10/26/15	 	& Customer requirements document		& 			 \\ \hline
-7		& 11/02/15	 	& Requirements specification	& 			 \\ \hline
-8		& 11/09/15	 	& Requirements specification and Design		& 			 \\ \hline
-9		& 11/16/15	 	& Design specification		& 			 \\ \hline
-10 (H)	& 11/23/15	 	& Design specification and Beginning dev		& 			 \\ \hline
-11		& 11/30/15	 	& Prototype development	& 			 \\ \hline
+4 (H)	& 10/12/15	 	& \specialcell{Fix plan document \\ and rethink project idea}	& 			yes \\ \hline
+5		& 10/19/15	 	& \specialcell{Start Customer requirements document \\ and Start prototype \#1}		& 			 \\ \hline
+6		& 10/26/15	 	& \specialcell{Finish Customer requirements document \\ and work on prototype \#1}		& 			 \\ \hline
+7		& 11/02/15	 	& \specialcell{Requirements specification \\ and work on prototype \#1} & 			 \\ \hline
+8		& 11/09/15	 	& \specialcell{Requirements specification and Design \\and finish prototype \#1}		& 			 \\ \hline
+9		& 11/16/15	 	& \specialcell{Design specification \\ and Start prototype \#2}		& 			 \\ \hline
+10 (H)	& 11/23/15	 	& \specialcell{Design specification \\ and work on prototype \#2}		& 			 \\ \hline
+11		& 11/30/15	 	& Finish prototype \#2 development	& 			 \\ \hline
 12 (F)	& 12/07/15	 	& Finalize Requirements		& 			 \\ \hline
 \end{tabular}
 \end{table}
 
 \subsection{Term 2}
 Winter 2016 \\
-Goals:
+What we will do and who will do it:
 \begin{itemize}
-	\item Finalize Design Specification
-	\item Continue Prototype Development with core functionality, Unity is a priority
-	\item Iteratively change Requirements and Design as needed based on Protype
-	\item Tighten up development and determine how we can extend our product in the time remaining
-	\item Release versions of product with limited functionality
-	\item Begin Testing on completed features
+	\item Finalize Design Specification - All, Lead: Carlo
+	\item Start core development, Unity is a priority - All, Lead: Angel
+	\item Iteratively change Requirements and Design as needed based on Prototype - All, Leads: Neil, Carlo
+	\item Determine if/how we can extend our product in the time remaining - All
+	\item Release versions of product with limited functionality - All
+	\item Begin Testing on completed features - All, Lead: Chris
 \end{itemize}
 
 \begin{table}[H]
@@ -173,12 +204,12 @@ Week 	& Date	 		& Work	 		& 	Done?	 \\ \hline
 
 \subsection{Term 3}
 Spring 2016 \\
-Goals:
+What we will do and who will do it:
 \begin{itemize}
-	\item Continue and finalize Development
-	\item Develop extensions for Maya and Unreal, if time allows
-	\item Continue and complete Testing on all features
-	\item Prepare final release
+	\item Continue and finalize Development - All, Lead: Angel
+	\item Develop extensions for Maya and Unreal, if time allows - All, Lead: Angel
+	\item Continue and complete Testing on all features - All, Lead: 
+	\item Prepare final release - All
 \end{itemize}
 
 \begin{table}[H]
@@ -204,38 +235,48 @@ Week 	& Date	 		& Work	 		& 	Done?	 \\ \hline
 \label{sec:risks}
 \subsection{Schedule}
 \begin{itemize}
-  \item One or more parts of the project may not work as expected due to its complexity
-  \item We may have delays due to unforeseen events
-  \item Project gets rushed and some areas of the project get neglected
-  \item Team members don’t have a set time to meet with the group
+ \item One or more parts of the project may not work as expected due to its complexity
+ \item We may have delays due to unforeseen events
+ \item Project gets rushed and some areas of the project get neglected
+ \item Team members don’t have a set time to meet with the group
 \end{itemize}
 
 \subsection{Requirements}
 \begin{itemize}
-  \item Requirements may change unexpectedly
-  \item Requirements are not fully known at the start of the project
-  \item Some requirements may be neglected as a lower priority but in reality would be a higher priority
-  \item Project’s target audience, focus, or goals change unexpectedly
+ \item Requirements may change unexpectedly
+ \item Requirements are not fully known at the start of the project
+ \item Some requirements may be neglected as a lower priority but in reality would be a higher priority
+ \item Project’s target audience, focus, or goals change unexpectedly
 \end{itemize}
 
 \subsection{Technology}
 \begin{itemize}
-  \item Certain team members have little to no experience with animation which may lead to delays
-  \item Editor/Development suite may be buggy and lead to delays
+ \item Certain team members have little to no experience with animation which may lead to delays
+ \item Editor/Development suite may be buggy and lead to delays
 \end{itemize}
 
 \subsection{Management}
 \begin{itemize}
-  \item Project doesn’t get reviewed often and we lose track of our progress
-  \item Project members haven’t yet found out the constraints for each problem they might encounter
-  \item One person assumes the role of multiple management roles
+ \item Project doesn’t get reviewed often and we lose track of our progress
+ \item Project members haven’t yet found out the constraints for each problem they might encounter
+ \item One person assumes the role of multiple management roles
 \end{itemize}
 
 \subsection{Customer}
 \begin{itemize}
-  \item Customer might want to change the requirements unexpectedly in a major way
-  \item Customer might want a change in the schedule which the team members can’t comply with
+ \item Customer might want to change the requirements unexpectedly in a major way
+ \item Customer might want a change in the schedule which the team members can’t comply with
 \end{itemize}
 
+\section{Leaders}
+This project is broken up into five different sections and each section has been designated a ``leader,” or somebody who is responsible for driving the completion of that section. The leaders for each section are listed below:
+\begin{itemize}
+ \item Project plan: Sarah Kushner
+ \item Requirements: Neil Castelino
+ \item Design: Carlo Rosati
+ \item Development: Angel Delgado
+ \item Testing: Chris Khedoo
+\end{itemize}
 
 \end{document}
+
