@@ -2,7 +2,7 @@
 texfile := plan
 
 compile: $(texfile).tex
-	pdflatex $(texfile).tex
+	pdflatex -halt-on-error $(texfile).tex
 
 clean:
 	rm -f *.aux
