@@ -19,7 +19,7 @@ clean:
 	-$(RM) *.out
 
 purge: clean
-	rm -f $(texfile).pdf
+	$(RM) $(texfile).pdf
 
 showpdf: compile
 	$(VIEWER) $(texfile).pdf
