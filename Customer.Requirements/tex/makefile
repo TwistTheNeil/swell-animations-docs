@@ -14,9 +14,9 @@ compile: $(texfile).tex
 	pdflatex -halt-on-error $(texfile).tex
 
 clean:
-	rm -f *.aux
-	rm -f *.log
-	rm -f *.out
+	-rm -f *.aux
+	-rm -f *.log
+	-rm -f *.out
 
 purge: clean
 	rm -f $(texfile).pdf
