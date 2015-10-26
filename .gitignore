@@ -2,3 +2,6 @@
 *.log
 *.gz
 *.pdf
+*.dvi
+*.ps
+.project
