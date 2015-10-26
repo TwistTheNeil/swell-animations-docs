@@ -12,6 +12,7 @@ all: compile showpdf purge
 
 compile: $(texfile).tex
 	pdflatex -halt-on-error $(texfile).tex
+	pdflatex -halt-on-error $(texfile).tex
 
 clean:
 	-$(RM) *.aux
