@@ -10,7 +10,7 @@
 	\item Save/Load animations.
 	\item Export an animation into a standard format.
 \end{itemize}
-\subsubsection{Interface}
+\subsection{Interface}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{MainInterface}
@@ -26,7 +26,7 @@ There are two components to the user interface: the control panel, and the view 
 \caption{Sections of the Unity user interface that are included with the plugin}
 \label{fig:interfaceLabled}
 \end{figure}
-\subsubsection{Control Panel}
+\subsection{Control Panel}
 \begin{figure}[H]
 \centering
 \includegraphics{ControlPanel}
@@ -52,7 +52,7 @@ Figure~\ref{fig:controlPanel} shows the control panel.  The function of each com
 	\item \textbf{Animation Layers grid} \hfill \\
 		This grid shows the animation layers currently applied in this contained in the overall animation.  The user can set the visibility of each layer.
 \end{enumerate}
-\subsubsection{View Panel}
+\subsection{View Panel}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.45]{ViewPanel}
@@ -68,12 +68,12 @@ Figure~\ref{fig:viewPanel} shows the view panel.  The function of each component
 	\item \textbf{Rotation Point} \hfill \\
 		This is a rotation point.  It will be oriented according to the rotation that will be applied to the mesh.
 \end{enumerate}
-\subsubsection{Line of Action Drawing}
+\subsection{Line of Action Drawing}
 	When the user clicks the "Draw LOA" button, the plugin enters LOA drawing mode.  In this mode the user will draw the LOA in the view panel.  The user may draw multiple LOAs.  How fast the line is drawn as well as the composition of the line will factor into the animation(Position, rotation, stretch, skew).  Multiple LOAs will further refine the animation.
 	When the user clicks the "Edit LOA" button, the plugin enters LOA editing mode.  In this mode the user can select a LOA and either delete it or redraw it.
-\subsubsection{Rotation Points}
+\subsection{Rotation Points}
 	The user can add a rotation point to any point on a LOA.  The rotation point will have a specific rotation vector.  This rotation vector will influence the rotation of the mesh when it reaches the rotation point.  The rotation vector can be edited by selecting the rotation point and dragging in the desired direction.
-\subsubsection{Animation Layering}
+\subsection{Animation Layering}
 	Animations can be layered into one animation.  Each layer has its own LOAs and rotation points associated with it.  When the animations are layered the overall animation will be interpolated using all of the animation layers.
-\subsubsection{Exporting}
+\subsection{Exporting}
 	When the artist is satisfied with the animation they have created they will have the ability to export it into a format that will be usable in other applications.
