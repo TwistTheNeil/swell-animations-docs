@@ -1,0 +1,34 @@
+\contentsline {section}{\numberline {1}Revision History}{4}{section.1}
+\contentsline {section}{\numberline {2}Background}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Features}{5}{subsection.2.1}
+\contentsline {section}{\numberline {3}Statement of Work}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Unity UI prototypes}{6}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Prototype \#1}{6}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Prototype \#2}{6}{subsubsection.3.1.2}
+\contentsline {subsection}{\numberline {3.2}Infrastructure setup}{6}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}UI Specifications}{7}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Main canvas.}{7}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Toolbar tray.}{7}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Path hierarchy palette.}{7}{subsubsection.3.3.3}
+\contentsline {subsection}{\numberline {3.4}UI Test Plan}{7}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}UI Development}{8}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Core Functionality Specifications}{8}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Core Functionality Test Plan}{8}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.8}Core Functionality Development}{9}{subsection.3.8}
+\contentsline {section}{\numberline {4}Weekly Defect Reports}{9}{section.4}
+\contentsline {section}{\numberline {5}Product Manual}{9}{section.5}
+\contentsline {subsection}{\numberline {5.1}Software}{9}{subsection.5.1}
+\contentsline {section}{\numberline {6}Resource List}{10}{section.6}
+\contentsline {subsection}{\numberline {6.1}Hardware}{10}{subsection.6.1}
+\contentsline {section}{\numberline {7}Assumptions}{10}{section.7}
+\contentsline {section}{\numberline {8}Schedule}{10}{section.8}
+\contentsline {subsection}{\numberline {8.1}Term 1}{10}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Term 2}{11}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Term 3}{12}{subsection.8.3}
+\contentsline {section}{\numberline {9}Risks}{13}{section.9}
+\contentsline {subsection}{\numberline {9.1}Schedule}{13}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Requirements}{13}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Technology}{14}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.4}Management}{14}{subsection.9.4}
+\contentsline {subsection}{\numberline {9.5}Customer}{14}{subsection.9.5}
+\contentsline {section}{\numberline {10}Leaders}{14}{section.10}
