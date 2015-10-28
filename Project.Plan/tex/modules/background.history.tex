@@ -1,0 +1,5 @@
+\section{Background}
+\label{sec:back}
+Based on previous research by the lab INRIA and their paper \href{https://hal.archives-ouvertes.fr/hal-01153763/file/SpaceTimeSketching.pdf}{Space-time sketching of character animation}, we want to build a Unity plugin that allows users to animate ``characters" along a sketched path under a set of constraints.
+
+The path’s fit will be calculated using delta values between the drawn path and the input point, where the input points are $(x,y,z)$ coordinates dropped every $\Delta t$ seconds for some predetermined $t$. The points will be dropped in a plane directly parallel to the viewport. The points can then be further modified. The distance from the viewport for each control point and in relation to each other can be changed using the mouse pointer tool.

@@ -1,0 +1,19 @@
+\subsection{UI Specifications}
+Specifications relating to the Unity UI and how the user will use to engage with the core functionality. Our prototypes will be used to solidify the specifications. It will show us what can and cannot be done through the UI in the ways we have defined based on limited knowledge.
+
+\subsubsection{Main canvas.} This will be the drawing area where paths are displayed as lines with square control points. Control points can be moved here using the Arrow tool. Paths can be drawn with the pen tool. Paths can be refined by drawing over / on top of already drawn paths using the path refine pen tool.
+
+\subsubsection{Toolbar tray.} Located at the top of the window. This toolbar will contain an arrow tool, pen tool, and path refine pen tool.
+
+\subsubsection{Path hierarchy palette.} This will include options to show/hide paths, show/fold subtrees and name/rename paths. Triangles will appear next to non-leaf node paths --- clicking on the triangle will show/hide the clicked path’s subtree.
+
+\subsection{UI Test Plan}
+The plan on how the UI will be tested and what criteria will correlate to successful implementation. As we go along making the first two prototypes, we can test the UI in phases based on what each prototype entails. The final phase of this testing will be User acceptance testing.
+
+\subsection{UI Development}
+A simple toolbar/tray will hold the pen and mouse tools. This toolbar can reside at the top of the interface window.
+
+The main window will be the work area, where the paths can be drawn, and edited using the different tools available in the toolbar tray.
+
+There will be a window to Show/Hide control paths for objects. Paths will be organized in a tree hierarchy. Each path may belong to any one parent path and have any number of child paths. This window will contain one path per line. Child paths will be indented one more indent unit than their parent. Parent paths can be folded such that their child paths are hidden. A triangle will appear to the left of any path that is not a leaf node. The triangle will point up when child paths are folded (hidden) and to the right when unfolded (visible). Paths can be renamed. The user can click the name, which will activate edit mode. Edit mode will use visual cues such as a border surrounding the path name with a contrasting background color. The user can click outside of this border box to exit edit mode or press the Escape or Enter/Return key.
+
