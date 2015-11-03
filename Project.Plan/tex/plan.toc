@@ -5,35 +5,35 @@
 \contentsline {subsection}{\numberline {3.1}Unity UI prototypes}{6}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Prototype \#1}{6}{subsubsection.3.1.1}
 \contentsline {subsubsection}{\numberline {3.1.2}Prototype \#2}{7}{subsubsection.3.1.2}
-\contentsline {subsection}{\numberline {3.2}Challenges}{7}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}3D Line Drawing}{7}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}General Algorithm}{7}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Layering of Animations}{8}{subsubsection.3.2.3}
-\contentsline {subsection}{\numberline {3.3}Infrastructure setup}{8}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}UI Specifications}{8}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Line drawing.}{8}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}Main canvas.}{8}{subsubsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.3}Toolbar tray.}{9}{subsubsection.3.4.3}
-\contentsline {subsubsection}{\numberline {3.4.4}Path hierarchy palette.}{9}{subsubsection.3.4.4}
-\contentsline {subsection}{\numberline {3.5}UI Test Plan}{9}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}UI Development}{9}{subsection.3.6}
-\contentsline {subsection}{\numberline {3.7}Core Functionality Specifications}{10}{subsection.3.7}
-\contentsline {subsection}{\numberline {3.8}Core Functionality Test Plan}{10}{subsection.3.8}
-\contentsline {subsection}{\numberline {3.9}Core Functionality Development}{10}{subsection.3.9}
-\contentsline {section}{\numberline {4}Weekly Defect Reports}{10}{section.4}
-\contentsline {section}{\numberline {5}Product Manual}{11}{section.5}
-\contentsline {subsection}{\numberline {5.1}Software}{11}{subsection.5.1}
-\contentsline {section}{\numberline {6}Resource List}{11}{section.6}
-\contentsline {subsection}{\numberline {6.1}Hardware}{11}{subsection.6.1}
-\contentsline {section}{\numberline {7}Assumptions}{11}{section.7}
-\contentsline {section}{\numberline {8}Schedule}{12}{section.8}
-\contentsline {subsection}{\numberline {8.1}Term 1}{12}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Term 2}{13}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Term 3}{14}{subsection.8.3}
-\contentsline {section}{\numberline {9}Risks}{15}{section.9}
-\contentsline {subsection}{\numberline {9.1}Schedule}{15}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Requirements}{15}{subsection.9.2}
-\contentsline {subsection}{\numberline {9.3}Technology}{16}{subsection.9.3}
-\contentsline {subsection}{\numberline {9.4}Management}{16}{subsection.9.4}
-\contentsline {subsection}{\numberline {9.5}Customer}{16}{subsection.9.5}
-\contentsline {section}{\numberline {10}Leaders}{16}{section.10}
+\contentsline {subsection}{\numberline {3.2}Infrastructure setup}{7}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}UI Specifications}{7}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Line drawing.}{7}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Main canvas.}{8}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Toolbar tray.}{8}{subsubsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.4}Path hierarchy palette.}{8}{subsubsection.3.3.4}
+\contentsline {subsection}{\numberline {3.4}UI Test Plan}{8}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}UI Development}{8}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Core Functionality Specifications}{9}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Core Functionality Test Plan}{9}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.8}Core Functionality Development}{9}{subsection.3.8}
+\contentsline {section}{\numberline {4}Challenges}{9}{section.4}
+\contentsline {subsection}{\numberline {4.1}3D Line Drawing}{10}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}General Algorithm}{10}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Layering of Animations}{10}{subsection.4.3}
+\contentsline {section}{\numberline {5}Weekly Defect Reports}{10}{section.5}
+\contentsline {section}{\numberline {6}Product Manual}{11}{section.6}
+\contentsline {subsection}{\numberline {6.1}Software}{11}{subsection.6.1}
+\contentsline {section}{\numberline {7}Resource List}{11}{section.7}
+\contentsline {subsection}{\numberline {7.1}Hardware}{11}{subsection.7.1}
+\contentsline {section}{\numberline {8}Assumptions}{11}{section.8}
+\contentsline {section}{\numberline {9}Schedule}{12}{section.9}
+\contentsline {subsection}{\numberline {9.1}Term 1}{12}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Term 2}{13}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Term 3}{14}{subsection.9.3}
+\contentsline {section}{\numberline {10}Risks}{15}{section.10}
+\contentsline {subsection}{\numberline {10.1}Schedule}{15}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Requirements}{15}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Technology}{16}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.4}Management}{16}{subsection.10.4}
+\contentsline {subsection}{\numberline {10.5}Customer}{16}{subsection.10.5}
+\contentsline {section}{\numberline {11}Leaders}{16}{section.11}
