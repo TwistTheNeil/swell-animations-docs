@@ -1,6 +1,9 @@
 \subsection{UI Specifications}
 Specifications relating to the Unity UI and how the user will use to engage with the core functionality. Our prototypes will be used to solidify the specifications. It will show us what can and cannot be done through the UI in the ways we have defined based on limited knowledge.
 
+
+\subsubsection{Line drawing.} The path will be calculated using delta values between the drawn path and the input point, where the input points are $(x,y,z)$ coordinates dropped every $\Delta t$ seconds for some predetermined $t$. The points will be dropped in a plane directly parallel to the viewport. The points can then be further modified. The distance from the viewport for each control point and in relation to each other can be changed using the mouse pointer tool.
+
 \subsubsection{Main canvas.} This will be the drawing area where paths are displayed as lines with square control points. Control points can be moved here using the Arrow tool. Paths can be drawn with the pen tool. Paths can be refined by drawing over / on top of already drawn paths using the path refine pen tool.
 
 \subsubsection{Toolbar tray.} Located at the top of the window. This toolbar will contain an arrow tool, pen tool, and path refine pen tool.
