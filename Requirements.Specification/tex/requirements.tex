@@ -1,0 +1,48 @@
+\documentclass{article}
+
+\usepackage{longtable, tabu}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\graphicspath{{./image/}} 
+
+\begin{document}
+
+\title{Animation Generation Requirments Specification}
+\author{Sarah Kushner \\
+		Neil Castelino \\
+		Angel Delgado \\
+		Carlo Rosati \\
+		Chris Khedoo}
+\date{\today}
+\maketitle
+\small
+
+\pagebreak
+\tableofcontents
+\pagebreak
+\section{Revision History}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Name	& Date	 		& 	Comment	 								& 	Version	 \\ \hline
+All		& 11/03/15		& 	Initial report on requirements specification &  	1.0 	 \\ \hline
+\end{tabular}
+
+\pagebreak
+\input{modules/background.history}
+\input{modules/users}
+\input{modules/features}
+\input{modules/not.features}
+\input{modules/references}
+
+\end{document}
