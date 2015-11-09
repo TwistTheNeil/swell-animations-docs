@@ -1,4 +1,4 @@
-\section{Functional Features}
+\subsection{Functional Features}
 	This tool is designed to allow an inexperienced animator to see results quickly.  Experienced developers will also benefit from the ability to quickly get animations going in order to iterate on ideas quickly.  
 	Animations are composed one or more of drawn paths called a Line of Action (LOA).  With this tool the user will be able to:
 \begin{itemize}
@@ -10,7 +10,7 @@
 	\item Save/Load animations.
 	\item Export an animation into a standard format.
 \end{itemize}
-\subsection{Interface}
+\subsubsection{Interface}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{MainInterface}
@@ -19,14 +19,14 @@
 \end{figure}
 This tool will be used as a plugin to Unity.  Therefore, the interface will be integrated into the Unity user interface.  Figure~\ref{fig:interface} shows a mock up of how the tool will look integrated with the Unity user interface.
 
-There are two components to the user interface: the control panel, and the view panel.  Each will be explained in detail in the following sections.
+There are two components to the user interface: the control panel, and the view panel.  Each will be explained in detail in the following subsections.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{MainInterfaceLabled}
 \caption{Sections of the Unity user interface that are included with the plugin}
 \label{fig:interfaceLabled}
 \end{figure}
-\subsection{Control Panel}
+\subsubsection{Control Panel}
 \begin{figure}[H]
 \centering
 \includegraphics{ControlPanel}
@@ -52,7 +52,7 @@ Figure~\ref{fig:controlPanel} shows the control panel.  The function of each com
 	\item \textbf{Animation Layers grid} \hfill \\
 		This grid shows the animation layers currently applied in this contained in the overall animation.  The user can set the visibility of each layer.
 \end{enumerate}
-\subsection{View Panel}
+\subsubsection{View Panel}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.45]{ViewPanel}
@@ -68,12 +68,12 @@ Figure~\ref{fig:viewPanel} shows the view panel.  The function of each component
 	\item \textbf{Rotation Point} \hfill \\
 		This is a rotation point.  It will be oriented according to the rotation that will be applied to the mesh.
 \end{enumerate}
-\subsection{Line of Action Drawing}
+\subsubsection{Line of Action Drawing}
 	When the user clicks the "Draw LOA" button, the plugin enters LOA drawing mode.  In this mode the user will draw the LOA in the view panel.  The user may draw multiple LOAs.  How fast the line is drawn as well as the composition of the line will factor into the animation(Position, rotation, stretch, skew).  Multiple LOAs will further refine the animation.
 	When the user clicks the "Edit LOA" button, the plugin enters LOA editing mode.  In this mode the user can select a LOA and either delete it or redraw it.
-\subsection{Rotation Points}
+\subsubsection{Rotation Points}
 	The user can add a rotation point to any point on a LOA.  The rotation point will have a specific rotation vector.  This rotation vector will influence the rotation of the mesh when it reaches the rotation point.  The rotation vector can be edited by selecting the rotation point and dragging in the desired direction.
-\subsection{Animation Layering}
+\subsubsection{Animation Layering}
 	Animations can be layered into one animation.  Each layer has its own LOAs and rotation points associated with it.  When the animations are layered the overall animation will be interpolated using all of the animation layers.
-\subsection{Exporting}
+\subsubsection{Exporting}
 	When the artist is satisfied with the animation they have created they will have the ability to export it into a format that will be usable in other applications.
