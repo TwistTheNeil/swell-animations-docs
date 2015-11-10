@@ -1,3 +1,6 @@
+.PHONY: all compile clean purge showpdf pdf
+.DEFAULT_GOAL := all
+
 texfile := requirements
 ifeq ($(shell which evince >/dev/null 2>&1; echo $$?), 0)
 	VIEWER := evince
@@ -5,8 +8,6 @@ else
 	# Oh I must be on a mac
 	VIEWER := open
 endif
-
-.DEFAULT_GOAL := all
 
 all: compile showpdf purge
 
@@ -27,8 +28,3 @@ showpdf: compile
 
 pdf: compile clean
 	mv $(texfile).pdf ../
-
-pretty-compile: pretty-$(texfile).tex
-    texfile := pretty-$(texfile)
-
-pretty: pretty-compile compile showpdf purge
