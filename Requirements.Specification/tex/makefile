@@ -6,7 +6,7 @@ else
 	VIEWER := open
 endif
 
-.PHONY: all compile clean purge showpdf pdf
+.DEFAULT_GOAL := all
 
 all: compile showpdf purge
 
@@ -27,3 +27,8 @@ showpdf: compile
 
 pdf: compile clean
 	mv $(texfile).pdf ../
+
+pretty-compile: pretty-$(texfile).tex
+    texfile := pretty-$(texfile)
+
+pretty: pretty-compile compile showpdf purge
