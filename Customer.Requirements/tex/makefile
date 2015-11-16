@@ -18,6 +18,7 @@ clean:
 	-$(RM) *.aux
 	-$(RM) *.log
 	-$(RM) *.out
+	-$(RM) *.toc
 
 purge: clean
 	$(RM) $(texfile).pdf
