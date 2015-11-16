@@ -1,5 +1,6 @@
 \documentclass{article}
 
+\usepackage[toc,page]{appendix}
 \usepackage{longtable, tabu}
 \usepackage{amsmath}
 \usepackage{float}
@@ -44,5 +45,10 @@ All		& 11/03/15		& 	Initial report on requirements specification &  	1.0 	 \\ \h
 \input{modules/spec.requirements}
 \input{modules/use.cases}
 \input{modules/references}
+
+\begin{appendices}
+    \input{modules/source.doc.links}
+    \input{modules/appendix.math}
+\end{appendices}
 
 \end{document}
