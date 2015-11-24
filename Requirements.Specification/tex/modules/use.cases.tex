@@ -1,9 +1,9 @@
-\section{Use Cases}
-\subsection{Start UI}
+\subsection{Use cases}
+\subsubsection{Start UI}
     \begin{itemize}
     \item Preconditions
         \begin{itemize}
-            \item User runs unity and loads plugin
+            \item User runs Unity and loads plugin
             \item User has not interacted with the plugin yet
         \end{itemize}
     \end{itemize}
@@ -17,5 +17,195 @@
         \item Postconditions
         \begin{itemize}
             \item User is able to use the plugin after they notice that it is available for use
+        \end{itemize}
+    \end{itemize}
+
+\subsubsection{Select "3D Line Drawing" tool}
+    \begin{itemize}
+    \item Preconditions
+        \begin{itemize}
+            \item Tool has been loaded successfully in Unity
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Main flow
+        \begin{itemize}
+            \item User observes that they are able to click on the tool
+            \item User clicks on the tool and is given the ability to draw a line within the Unity interface by clicking on the screen and dragging the mouse across the interface
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Postconditions
+        \begin{itemize}
+            \item User is able to draw a line within the Unity interface
+            \item Drawn LOA is visible on screen
+        \end{itemize}
+    \end{itemize}
+
+\subsubsection{Constraint selection}
+    \begin{itemize}
+    \item Preconditions
+        \begin{itemize}
+            \item An LOA has been drawn by the user
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Main flow
+        \begin{itemize}
+            \item The user right clicks on the LOA which has been drawn
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Postconditions
+        \begin{itemize}
+            \item The user is able to see a menu with constraint properties
+            \item The user is able to click on the menu options and modify values accordingly
+        \end{itemize}
+    \end{itemize}
+
+\subsubsection{Animation Generation}
+    \begin{itemize}
+    \item Preconditions
+        \begin{itemize}
+            \item An LOA has been drawn in the Unity interface
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Main flow
+        \begin{itemize}
+            \item User selects constraints and models which will be used when generating the animation
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Postconditions
+        \begin{itemize}
+            \item The animation is played on the Unity interface
+        \end{itemize}
+    \end{itemize}
+
+\subsubsection{Modifying a path previously drawn}
+    \begin{itemize}
+    \item Preconditions
+        \begin{itemize}
+            \item An LOA has been drawn in the Unity interface
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Main flow
+        \begin{itemize}
+            \item The user is able to click on the LOA and modify its shape using control points
+            \item The LOA is modified accordingly and the user is able to continue modifying if they desire
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Postconditions
+        \begin{itemize}
+            \item The LOA is modified according to the user’s desire
+        \end{itemize}
+    \end{itemize}
+
+\subsubsection{Selecting a LOA}
+    \begin{itemize}
+    \item Preconditions
+        \begin{itemize}
+            \item An LOA has been drawn by the user
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Main flow
+        \begin{itemize}
+            \item User clicks on the LOA
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Postconditions
+        \begin{itemize}
+            \item The LOA has been selected
+        \end{itemize}
+    \end{itemize}
+
+\subsubsection{Deleting an LOA}
+    \begin{itemize}
+    \item Preconditions
+        \begin{itemize}
+            \item An LOA has been drawn in the Unity interface
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Main flow
+        \begin{itemize}
+            \item User selects the LOA which has been previously drawn
+            \item User clicks on delete or presses delete button
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Postconditions
+        \begin{itemize}
+            \item The LOA and appropriate animation is deleted
+        \end{itemize}
+    \end{itemize}
+
+\subsubsection{Saving an LOA}
+    \begin{itemize}
+    \item Preconditions
+        \begin{itemize}
+            \item An LOA has been drawn in the Unity interface
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Main flow
+        \begin{itemize}
+            \item User selects the LOA which has been previously drawn
+            \item User clicks on save button or presses ctrl+s and the program automatically saves the LOA to a file if the user is modifying a previously saved path
+            \item User clicks on the save button or presses ctrl+s and a prompt is displayed which asks the user to specify a filename for storage.
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Postconditions
+        \begin{itemize}
+            \item The LOA (and the properties and constraints) is saved onto the disk
+        \end{itemize}
+    \end{itemize}
+
+\subsubsection{Animation Tweaking}
+    \begin{itemize}
+    \item Preconditions
+        \begin{itemize}
+            \item An LOA has been drawn in the Unity interface and an animation has been generated
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Main flow
+        \begin{itemize}
+            \item The user selects an LOA
+            \item User right clicks on an LOA drawn
+            \item User clicks on properties
+            \item User modifies properties
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Postconditions
+        \begin{itemize}
+            \item The animation properties are modified and the animation will be generated accordingly
+        \end{itemize}
+    \end{itemize}
+
+\subsubsection{Animation is drawn}
+    \begin{itemize}
+    \item Preconditions
+        \begin{itemize}
+            \item An LOA has been drawn
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Main flow
+        \begin{itemize}
+            \item The user observes the animation being generated
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item Postconditions
+        \begin{itemize}
+            \item The animation has been generated
         \end{itemize}
     \end{itemize}
