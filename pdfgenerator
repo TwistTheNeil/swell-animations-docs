@@ -14,7 +14,7 @@ cmp --silent $swell_file $tux_swell_file || cp $swell_file $tux_swell_file
 git fetch &> /dev/null
 check=$(git log HEAD..origin/master --oneline | wc -l)
 
-sed -i "s/Last\spulled\sgit.*/Last pulled git $(date)<\/font>/" ~/public_html/stuff.html
+sed -i "s/Last\spulled\sgit.*/Last pulled git $(date)<\/font>/" $tux_swell_file
 if [ "$check" -lt "1" ]; then
     exit;
 fi
@@ -31,4 +31,4 @@ for i in $(find . -name *.pdf); do
     mv "$i" ~/public_html/ &> /dev/null
 done
 
-sed -i "s/Last\supdated\spdfs.*/Last updated pdfs $(date)<\/font><br>/" ~/public_html/stuff.html
+sed -i "s/Last\supdated\spdfs.*/Last updated pdfs $(date)<\/font><br>/" $tux_swell_file
