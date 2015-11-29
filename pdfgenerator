@@ -1,20 +1,18 @@
 #!/bin/bash
 
 stuff_file='public_html/stuff.html'
-tux_stuff_file="~/$stuff_file"
 swell_file='public_html/swell-animations-status.html'
-tux_stuff_file="~/$swell_file"
 
 cd ~/Pathfinding/
 
 # update project website files if needed
-cmp --silent $stuff_file $tux_stuff_file || cp $stuff_file $tux_stuff_file
-cmp --silent $swell_file $tux_swell_file || cp $swell_file $tux_swell_file
+cp -u "$stuff_file" ~/public_html/
+cp -u "$swell_file" ~/public_html/
 
 git fetch &> /dev/null
 check=$(git log HEAD..origin/master --oneline | wc -l)
 
-sed -i "s/Last\spulled\sgit.*/Last pulled git $(date)<\/font>/" $tux_swell_file
+sed -i "s/Last\spulled\sgit.*/Last pulled git $(date)<\/font>/" ~/public_html/swell-animations-status.html
 if [ "$check" -lt "1" ]; then
     exit;
 fi
@@ -31,4 +29,4 @@ for i in $(find . -name *.pdf); do
     mv "$i" ~/public_html/ &> /dev/null
 done
 
-sed -i "s/Last\supdated\spdfs.*/Last updated pdfs $(date)<\/font><br>/" $tux_swell_file
+sed -i "s/Last\supdated\spdfs.*/Last updated pdfs $(date)<\/font><br>/" ~/public_html/swell-animations-status.html
