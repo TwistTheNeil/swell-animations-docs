@@ -1,6 +1,15 @@
 #!/bin/bash
 
+stuff_file='public_html/stuff.html'
+tux_stuff_file="~/$stuff_file"
+swell_file='public_html/swell-animations-status.html'
+tux_stuff_file="~/$swell_file"
+
 cd ~/Pathfinding/
+
+# update project website files if needed
+cmp --silent $stuff_file $tux_stuff_file || cp $stuff_file $tux_stuff_file
+cmp --silent $swell_file $tux_swell_file || cp $swell_file $tux_swell_file
 
 git fetch &> /dev/null
 check=$(git log HEAD..origin/master --oneline | wc -l)
