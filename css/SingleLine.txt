@@ -1,1 +1,1 @@
-Animate models by just drawing a path
+Animate models by just drawing a path within the Unity framework
