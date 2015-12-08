@@ -4,7 +4,7 @@
 \begin{itemize}
 	\item Draw a LOA.
 	\item Edit a previously drawn LOA.
-	\item Select a mesh that the animation will be applied to.
+	\item Select a model that the animation will be applied to.
 	\item Preview the animation.
 	\item Layer animations together into one animation.
 	\item Save/Load animations.
@@ -36,7 +36,7 @@ There are two components to the user interface: the control panel, and the view 
 Figure~\ref{fig:controlPanel} shows the control panel.  The function of each component is described below.
 \begin{enumerate}
 	\item \textbf{Animation Preview Scrubber} \hfill \\
-		Allows the user to go to any point in the animation.  The position of the mesh at that point in the animation will be shown in the view panel.
+		Allows the user to go to any point in the animation.  The position of the model at that point in the animation will be shown in the view panel.
 	\item \textbf{Animation preview controls} \hfill \\
 		With these controls a user can play, pause, restart, rewind, fast forward, and go to the end of the animation.
 	\item \textbf{Draw LOA} \hfill \\
@@ -45,8 +45,8 @@ Figure~\ref{fig:controlPanel} shows the control panel.  The function of each com
 		When this button is clicked the plugin goes into LOA edit mode.
 	\item \textbf{Place Rotation Point} \hfill \\
 		When this button is clicked the user will be able to place rotation points on the LOA.
-	\item \textbf{Mesh} \hfill \\
-		This component is used to select the mesh that the animation will be applied to.
+	\item \textbf{Model} \hfill \\
+		This component is used to select the model to which the animation will be applied.
 	\item \textbf{Add/Remove animation layers} \hfill \\
 		These buttons allow the user to add or remove animations that will be layered into the overall animation.
 	\item \textbf{Animation Layers grid} \hfill \\
@@ -61,19 +61,19 @@ Figure~\ref{fig:controlPanel} shows the control panel.  The function of each com
 \end{figure}
 Figure~\ref{fig:viewPanel} shows the view panel.  The function of each component is described below.
 \begin{enumerate}
-	\item \textbf{Mesh} \hfill \\
-		The Mesh is displayed in the position corresponding to the current frame of the animation.
+	\item \textbf{Model} \hfill \\
+		The Model is displayed in the position corresponding to the current frame of the animation.
 	\item \textbf{LOA} \hfill \\
 		All LOAs that have been drawn will be displayed.
 	\item \textbf{Rotation Point} \hfill \\
-		This is a rotation point.  It will be oriented according to the rotation that will be applied to the mesh.
+		This is a rotation point.  It will be oriented according to the rotation that will be applied to the selected model.
 (Priority 1)
 \end{enumerate}
 \subsubsection{Line of Action Drawing}
 	When the user clicks the "Draw LOA" button, the plugin enters LOA drawing mode.  In this mode the user will draw the LOA in the view panel.  The user may draw multiple LOAs.  How fast the line is drawn as well as the composition of the line will factor into the animation(Position, rotation, stretch, skew).  Multiple LOAs will further refine the animation.
 	When the user clicks the "Edit LOA" button, the plugin enters LOA editing mode.  In this mode the user can select a LOA and either delete it or redraw it. (Priority 1)
 \subsubsection{Rotation Points}
-	The user can add a rotation point to any point on a LOA.  The rotation point will have a specific rotation vector.  This rotation vector will influence the rotation of the mesh when it reaches the rotation point.  The rotation vector can be edited by selecting the rotation point and dragging in the desired direction. (Priority 1)
+	The user can add a rotation point to any point on a LOA.  The rotation point will have a specific rotation vector.  This rotation vector will influence the rotation of the model when it reaches the rotation point.  The rotation vector can be edited by selecting the rotation point and dragging in the desired direction. (Priority 1)
 \subsubsection{Animation Layering}
 	Animations can be layered into one animation.  Each layer has its own LOAs and rotation points associated with it.  When the animations are layered the overall animation will be interpolated using all of the animation layers. (Priority 1)
 
