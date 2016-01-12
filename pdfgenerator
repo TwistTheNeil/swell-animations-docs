@@ -9,14 +9,13 @@ cd ~/Pathfinding/
 cp -u "$stuff_file" ~/public_html/
 cp -u "$swell_file" ~/public_html/
 
-if [ "x$1" != "x--force" ]; then
-    git fetch &> /dev/null
-    check=$(git log HEAD..origin/master --oneline | wc -l)
+git fetch &> /dev/null
+check=$(git log HEAD..origin/master --oneline | wc -l)
 
-    sed -i "s/Last\spulled\sgit.*/Last pulled git $(date)<\/font><\/br>/" ~/public_html/swell-animations-status.html
-    if [ "$check" -lt "1" ]; then
-        exit;
-    fi
+sed -i "s/Last\spulled\sgit.*/Last pulled git $(date)<\/font><\/br>/" ~/public_html/swell-animations-status.html
+
+if [ "x$1" != "x--force" ] && [ "$check" -lt "1" ]; then
+    exit;
 fi
 
 git pull --rebase &> /dev/null
