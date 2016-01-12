@@ -9,12 +9,14 @@ cd ~/Pathfinding/
 cp -u "$stuff_file" ~/public_html/
 cp -u "$swell_file" ~/public_html/
 
-git fetch &> /dev/null
-check=$(git log HEAD..origin/master --oneline | wc -l)
+if [ "x$1" != "x--force" ]; then
+    git fetch &> /dev/null
+    check=$(git log HEAD..origin/master --oneline | wc -l)
 
-sed -i "s/Last\spulled\sgit.*/Last pulled git $(date)<\/font>/" ~/public_html/swell-animations-status.html
-if [ "$check" -lt "1" ]; then
-    exit;
+    sed -i "s/Last\spulled\sgit.*/Last pulled git $(date)<\/font><\/br>/" ~/public_html/swell-animations-status.html
+    if [ "$check" -lt "1" ]; then
+        exit;
+    fi
 fi
 
 git pull --rebase &> /dev/null
@@ -30,3 +32,4 @@ for i in $(find . -name *.pdf); do
 done
 
 sed -i "s/Last\supdated\sdocs.*/Last updated docs $(date)<\/font><br>/" ~/public_html/swell-animations-status.html
+sed -i "s/Updated\ on\ .*/Updated on $(hostname)<\/font><br>/" ~/public_html/swell-animations-status.html
