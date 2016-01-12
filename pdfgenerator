@@ -32,3 +32,5 @@ done
 
 sed -i "s/Last\supdated\sdocs.*/Last updated docs $(date)<\/font><br>/" ~/public_html/swell-animations-status.html
 sed -i "s/Updated\ on\ .*/Updated on $(hostname)<\/font><br>/" ~/public_html/swell-animations-status.html
+
+git log --oneline | head -n 20 >> ~/public_html/swell-animations-status.html
